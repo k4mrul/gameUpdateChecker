@@ -24,5 +24,6 @@ for heading in anchorHeading:
     if 'Update' in heading.find('a').text:
         anchorHeading = heading.find('a').text
         anchorLink = heading.find('a')['href']
+    break  #if match with first item, break the loop
 
 grab_update_text(recipient, subject, findWord, anchorHeading, anchorLink, file_name)
